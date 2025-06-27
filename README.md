@@ -15,7 +15,7 @@ A shell script that automates Git conflict resolution and smooths out the push p
 
 ## Usage
 
-Download: _conflict-resolver.sh_ to the home of your project.
+Download: `conflict-resolver.sh` to the home of your project.
 
 Make the script executable:
 
@@ -23,25 +23,18 @@ Make the script executable:
 chmod +x conflict-resolver.sh
 ```
 
-Then run it:
-
-```bash
-./conflict-resolver.sh
-```
-
 
 
 ### Sample Workflow
 
 1. Developer pulls the latest code.
-2. Makes changes and runs this script instead of a manual `git push`.
-3. The script automatically handles conflict resolution and pushing.
+2. Makes changes to the folder and runs `git add .` + `git commit -m "SOme commit"` instead of a manual `git push`.
+3. The script automatically handles conflict resolution and pushing every minute after you commit.
+`DO NOT RUN 'git push' IF YOU ARE USING THIS SCRIPT`
 
-## 📸 Screenshot / Diagram
+## Screenshots
 
 ![conflict-resolver workflow](assets/conflict-resolver-diagram.png)
-
-> Make sure to place your image in a folder like `assets/` inside your repository.
 
 ## 🧪 Requirements
 
@@ -49,16 +42,16 @@ Then run it:
 - Linux/macOS terminal
 - Sufficient permission to push to the remote repository
 
-## ⚠️ Warnings
+## Warnings
 
 - This script auto-resolves conflicts using the "ours" strategy, which **keeps your local version** and discards remote conflicting changes.
 - Recommended only for workflows where you are sure your version is the desired resolution.
 - Use with caution and always ensure proper backup/version control.
 
-## 📄 License
+## License
 
 MIT License
 
 ---
 
-Happy coding! 🎉
+Happy coding!
